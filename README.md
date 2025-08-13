@@ -21,14 +21,6 @@ A simple and secure user authentication system built with Node.js, Express, and 
 - **Template Engine**: EJS
 - **Other**: CORS, dotenv for environment variables
 
-## 📋 Prerequisites
-
-Before running this project, make sure you have:
-
-- Node.js installed (version 14 or higher)
-- MySQL database server running
-- Git (to clone the repository)
-
 ## 🔧 Installation & Setup
 
 ### 1. Clone the Repository
@@ -196,18 +188,7 @@ The server will start on `http://localhost:3000` (or the port specified in your 
 }
 ```
 
-## 🔐 Authentication
 
-### JWT Token Usage
-After successful login, you'll receive a JWT token. Include this token in the Authorization header for protected endpoints:
-
-```
-Authorization: Bearer <your_jwt_token>
-```
-
-### Role-Based Access
-- **User Role**: Can access their own profile and filter users by country
-- **Admin Role**: Can access all endpoints including user management features
 
 ## 📊 Database Schema
 
@@ -243,39 +224,7 @@ Common HTTP status codes:
 - `404`: Not Found
 - `500`: Internal Server Error
 
-## 🧪 Testing the API
 
-You can test the API endpoints using tools like:
-- Postman
-- cURL
-- Thunder Client (VS Code extension)
-
-### Example cURL Commands
-
-**Register a new user:**
-```bash
-curl -X POST http://localhost:3000/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "John Doe",
-    "email": "john@example.com",
-    "password": "password123",
-    "role": "User",
-    "phone": "1234567890",
-    "city": "New York",
-    "country": "USA"
-  }'
-```
-
-**Login:**
-```bash
-curl -X POST http://localhost:3000/login \
-  -H "Content-Type: application/json" \
-  -d '{
-    "email": "john@example.com",
-    "password": "password123"
-  }'
-```
 
 ## 📝 Project Structure
 
@@ -312,12 +261,5 @@ This project is licensed under the ISC License.
 
 **Khushal Pankhaniya**
 
----
 
-**Note**: This is a basic authentication system. For production use, consider adding:
-- Password hashing with bcrypt
-- Input validation
-- Rate limiting
-- HTTPS
-- More comprehensive error handling
 
