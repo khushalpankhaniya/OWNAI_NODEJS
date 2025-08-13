@@ -166,7 +166,7 @@ npm run dev
 
 Common HTTP status codes:
 - `200`: Success
-- `201`: Created (for registration)
+- `201`: Created 
 - `400`: Bad Request
 - `401`: Unauthorized
 - `404`: Not Found
