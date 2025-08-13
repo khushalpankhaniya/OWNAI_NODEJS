@@ -20,10 +20,9 @@ npm install
 ```
 
 ### 3. Environment Setup
-Create a `.env` file in the root directory and add your configuration:
-```env
+Create a `.env` file in the root directory
 PORT=3000
-JWT_SECRET=your_jwt_secret_key
+JWT_SECRET=key
 ```
 
 ### 4. Database Setup
@@ -35,39 +34,37 @@ npm run dev
 
 ##  API Endpoints
 
-### Authentication Endpoints
-
 #### Register User
-- **URL**: `POST /register`
+- **URL**: `POST /[register](http://localhost:3000/register)`
 - **Description**: Create a new user account
 - **Body**:
 ```json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "password123",
-  "role": "User",
+  "name": "khushal",
+  "email": "khushal@example.com",
+  "password": "123",
+  "role": "Admin",
   "phone": "1234567890",
-  "city": "New York",
-  "country": "USA"
+  "city": "rajkot",
+  "country": "inida"
 }
 ```
 - **Response**:
 ```json
 {
   "success": true,
-  "message": "Signup for john@example.com"
+  "message": "Signup for khushal@example.com"
 }
 ```
 
 #### Login User
-- **URL**: `POST /login`
-- **Description**: Authenticate user and get JWT token
+- **URL**: `POST /[login](http://localhost:3000/loign)`
+- **Description**: authenticate user and get JWT token
 - **Body**:
 ```json
 {
-  "email": "john@example.com",
-  "password": "password123"
+  "email": "khushal@example.com",
+  "password": "123"
 }
 ```
 - **Response**:
@@ -82,29 +79,27 @@ npm run dev
 ### User Management Endpoints
 
 #### Get User Profile
-- **URL**: `GET /:id`
+- **URL**: `GET /[:id](http://localhost:3000/:id)`
 - **Description**: Get details of a specific user
-- **Headers**: `Authorization: Bearer <token>`
 - **Response**:
 ```json
 {
   "success": true,
   "user": {
     "id": 1,
-    "name": "John Doe",
-    "email": "john@example.com",
-    "role": "User",
+    "name": "khushal",
+    "email": "khushal@example.com",
+    "role": "admin",
     "phone": "1234567890",
-    "city": "New York",
-    "country": "USA"
+    "city": "rajkot",
+    "country": "india"
   }
 }
 ```
 
 #### Filter Users by Country
-- **URL**: `GET /filter?country=USA`
-- **Description**: Get all users from a specific country
-- **Headers**: `Authorization: Bearer <token>`
+- **URL**: `GET /[filter?country=india](http://localhost:3000/filter?country=india)`
+- **Description**: Get all users from  specific country
 - **Response**:
 ```json
 {
@@ -112,9 +107,9 @@ npm run dev
   "users": [
     {
       "id": 1,
-      "name": "John Doe",
-      "email": "john@example.com",
-      "country": "USA"
+      "name": "khushal",
+      "email": "khushal@example.com",
+      "country": "india"
     }
   ]
 }
@@ -123,9 +118,8 @@ npm run dev
 ### Admin Only Endpoints
 
 #### Get All Users
-- **URL**: `GET /all`
+- **URL**: `GET /[all](http://localhost:3000/all)`
 - **Description**: Get list of all users (Admin only)
-- **Headers**: `Authorization: Bearer <token>`
 - **Response**:
 ```json
 {
@@ -133,18 +127,17 @@ npm run dev
   "users": [
     {
       "id": 1,
-      "name": "John Doe",
-      "email": "john@example.com",
-      "role": "User"
+      "name": "khushal",
+      "email": "khushal@example.com",
+      "role": "Admin"
     }
   ]
 }
 ```
 
 #### Search Users
-- **URL**: `GET /search?query=john`
+- **URL**: `GET /[search?query=khushal](http://localhost:3000/search?query=khushal)`
 - **Description**: Search users by name or email (Admin only)
-- **Headers**: `Authorization: Bearer <token>`
 - **Response**:
 ```json
 {
@@ -152,8 +145,8 @@ npm run dev
   "users": [
     {
       "id": 1,
-      "name": "John Doe",
-      "email": "john@example.com"
+      "name": "khushal",
+      "email": "khushal@example.com"
     }
   ]
 }
