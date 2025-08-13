@@ -1,27 +1,12 @@
-# JWT Authentication System
+# OWNAI_NODEJS
 
-A simple and secure user authentication system built with Node.js, Express, and JWT (JSON Web Tokens). This project allows users to register, login, and access protected features based on their roles.
-
-## 🚀 Features
-
-- **User Registration**: Create new accounts with personal details
-- **User Login**: Secure login with email and password
-- **JWT Authentication**: Secure token-based authentication
-- **Role-Based Access**: Different permissions for Admin and User roles
-- **User Management**: Admin can view all users and search for specific users
-- **Country Filtering**: Filter users by country
-- **User Profiles**: View individual user details
-- **Database Integration**: Uses MySQL database with TypeORM
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Backend**: Node.js, Express.js
 - **Database**: MySQL with TypeORM
-- **Authentication**: JWT (JSON Web Tokens)
-- **Template Engine**: EJS
-- **Other**: CORS, dotenv for environment variables
+- **Authentication**: JWT 
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -38,31 +23,17 @@ npm install
 Create a `.env` file in the root directory and add your configuration:
 ```env
 PORT=3000
-DB_HOST=localhost
-DB_PORT=3306
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
-DB_DATABASE=your_database_name
 JWT_SECRET=your_jwt_secret_key
 ```
 
 ### 4. Database Setup
 - Create a MySQL database
-- Update the database connection details in `.env` file
-- The tables will be created automatically when you run the application
 
 ### 5. Run the Application
 ```bash
-# For development (with auto-restart)
 npm run dev
 
-# For production
-npm start
-```
-
-The server will start on `http://localhost:3000` (or the port specified in your .env file).
-
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Authentication Endpoints
 
@@ -190,9 +161,8 @@ The server will start on `http://localhost:3000` (or the port specified in your 
 
 
 
-## 📊 Database Schema
-
-The application uses a `users` table with the following structure:
+## Database Schema
+ `users` table 
 
 | Field    | Type        | Description                    |
 |----------|-------------|--------------------------------|
@@ -205,16 +175,6 @@ The application uses a `users` table with the following structure:
 | city     | VARCHAR(100)| City name                      |
 | country  | VARCHAR(100)| Country name                   |
 
-## 🚨 Error Handling
-
-The API returns consistent error responses:
-
-```json
-{
-  "success": false,
-  "message": "Error description"
-}
-```
 
 Common HTTP status codes:
 - `200`: Success
@@ -223,43 +183,4 @@ Common HTTP status codes:
 - `401`: Unauthorized
 - `404`: Not Found
 - `500`: Internal Server Error
-
-
-
-## 📝 Project Structure
-
-```
-ownAI_nodeJS/
-├── app.js                 # Main application file
-├── package.json           # Project dependencies
-├── .env                   # Environment variables
-├── authentication/
-│   └── jwt-authentication.js  # JWT middleware
-├── db/
-│   ├── data-source.js     # Database configuration
-│   └── entities/
-│       └── User.js        # User entity definition
-├── routes/
-│   └── logicRoutes.js     # API route handlers
-└── services/
-    └── userService.js     # Business logic for users
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the ISC License.
-
-## 👨‍💻 Author
-
-**Khushal Pankhaniya**
-
-
 
