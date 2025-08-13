@@ -19,18 +19,13 @@ cd OWNAI_NODEJS
 npm install
 ```
 
-### 3. Environment Setup
-Create a `.env` file in the root directory
-PORT=3000
-JWT_SECRET=key
-```
-
 ### 4. Database Setup
-- Create a MySQL database
+- Create a MySQL database.
 
 ### 5. Run the Application
 ```bash
 npm run dev
+
 
 ##  API Endpoints
 
